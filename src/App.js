@@ -5,6 +5,7 @@ let punk_api = 'https://api.punkapi.com/v2/beers';
 
 function App() {
   const [beers, setBeers] = useState([]);
+  //const [isLiked, setIsLiked] = useState(false)
 
   useEffect(() => {
     console.log('mounted');
@@ -16,11 +17,19 @@ function App() {
   useEffect(() => {
     console.log('updated', beers);
   }, [beers]);
+  /*useEffect(() => {
+    console.log('updated', isLiked);
+  }, [isLiked]);*/
+
+  /*const handleClick = () => {
+    setIsLiked(!isLiked)
+  }*/
 
   return(
     <div className='App'>
       <h1>Punk API</h1>
       <Beers beers={beers}/>
+      
     </div>
   )
 }
